@@ -8,41 +8,52 @@ body{
   margin:0;
   height:100vh;
   font-family:'Segoe UI',sans-serif;
-  background:url('cover.PNG') no-repeat center center;
+  background:url('background.jpg') no-repeat center center;
   background-size:cover;
   display:flex;
   justify-content:center;
-  align-items:flex-end;   /* ini bikin turun ke bawah */
+  align-items:flex-end;
+  padding-bottom:15vh; /* posisi agak ke bawah */
   text-align:center;
-  padding-bottom:200px;   /* atur seberapa turun */
 }
 
 .overlay{
-  background:rgba(0,0,0,0.35);
-  padding:40px;
-  border-radius:20px;
+  background:rgba(0,0,0,0.4);
+  width:85%;
+  max-width:500px;
+  padding:40px 25px;
+  border-radius:25px;
   color:white;
 }
 
-.guest{
-  font-size:22px;
-  font-weight:600;
-  margin:15px 0;
+/* tulisan Dear */
+.overlay div:first-child{
+  font-size:5vw;
+  letter-spacing:1px;
 }
 
+/* nama tamu */
+.guest{
+  font-size:7vw;
+  font-weight:600;
+  margin:20px 0;
+}
+
+/* tombol */
 button{
   background:white;
   color:black;
   border:none;
-  padding:10px 25px;
-  border-radius:30px;
+  padding:14px 35px;
+  border-radius:40px;
   cursor:pointer;
-  font-size:14px;
+  font-size:5vw;
+  font-weight:500;
   transition:0.3s;
 }
 
 button:hover{
-  opacity:0.8;
+  opacity:0.85;
 }
 </style>
 </head>
