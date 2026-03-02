@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Invitation</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  font-family:'Segoe UI',sans-serif;
+  background:url('cover.PNG') no-repeat center center;
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.overlay{
+  background:rgba(0,0,0,0.35);
+  padding:40px;
+  border-radius:20px;
+  color:white;
+}
+
+.guest{
+  font-size:22px;
+  font-weight:600;
+  margin:15px 0;
+}
+
+button{
+  background:white;
+  color:black;
+  border:none;
+  padding:10px 25px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:14px;
+  transition:0.3s;
+}
+
+button:hover{
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+  <div>Dear</div>
+  <div class="guest" id="guestName">Tamu Undangan</div>
+  <button onclick="openInvitation()">Open Invitation</button>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const guest = params.get("to");
+
+if(guest){
+  document.getElementById("guestName").innerText = guest.replace(/\+/g, " ");
+}
+
+function openInvitation(){
+  window.location.href = "https://sites.google.com/view/aurelsuyuf/home";
+}
+</script>
+
+</body>
+</html>
